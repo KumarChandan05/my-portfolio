@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you for contacting me</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .greeting {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .message-body {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: #555;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .response-time {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .response-time strong {
+            color: #856404;
+        }
+        
+        .contact-info {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .contact-info h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .contact-item {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item strong {
+            min-width: 80px;
+            color: #555;
+        }
+        
+        .social-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .social-link {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: #5a6fd8;
+        }
+        
+        .footer {
+            background-color: #f8f9fa;
+            padding: 25px 40px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+        }
+        
+        .signature strong {
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .signature p {
+            color: #666;
+            margin: 5px 0;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .email-container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            
+            .header,
+            .content,
+            .footer {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .social-link {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Thank You for Reaching Out! 🚀</h1>
+            <p>Your message has been received</p>
+        </div>
+        
+        <!-- Content -->
+        <div class="content">
+            <div class="greeting">
+                Hi {{name}},
+            </div>
+            
+            <div class="message-body">
+                Thank you for taking the time to contact me through my portfolio website! I really appreciate your interest and I'm excited to learn more about your project or opportunity.
+            </div>
+            
+            <div class="highlight-box">
+                <strong>📋 Your Message Summary:</strong><br>
+                <strong>Subject:</strong> {{subject}}<br>
+                <strong>Received:</strong> {{date}} at {{time}}
+            </div>
+            
+            <div class="response-time">
+                <strong>⏰ Response Time:</strong> I typically respond to messages within 24-48 hours. I'll get back to you as soon as possible!
+            </div>
+            
+            <div class="message-body">
+                In the meantime, feel free to:
+                <ul style="margin: 15px 0; padding-left: 30px;">
+                    <li>Check out my latest projects on my portfolio</li>
+                    <li>Connect with me on LinkedIn for updates</li>
+                    <li>Follow my work on GitHub</li>
+                    <li>If urgent, you can reach me directly at: <strong>chandan050201@gmail.com</strong></li>
+                </ul>
+            </div>
+            
+            <div class="contact-info">
+                <h3>📞 Other Ways to Connect:</h3>
+                <div class="contact-item">
+                    <strong>Email:</strong> chandan050201@gmail.com
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong> +91 8658121332
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong> Bengaluru, Karnataka
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/chandankumar52/" class="social-link">LinkedIn</a>
+                <a href="https://github.com/KumarChandan05" class="social-link">GitHub</a>
+                <a href="mailto:chandan050201@gmail.com" class="social-link">Direct Email</a>
+            </div>
+            
+            <div class="message-body">
+                I'm looking forward to discussing your project and exploring how we can work together to bring your ideas to life!
+            </div>
+            
+            <div class="signature">
+                <strong>Best regards,</strong><br>
+                <strong>Chandan Kumar</strong>
+                <p>Full Stack Developer</p>
+                <p>Building digital experiences that matter</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>This is an automated response to confirm receipt of your message.</p>
+            <p>Please do not reply to this email directly.</p>
+        </div>
+    </div>
+</body>
+</html>

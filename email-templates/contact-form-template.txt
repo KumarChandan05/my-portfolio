@@ -1,0 +1,28 @@
+📧 NEW CONTACT FORM SUBMISSION 📧
+
+Hello Chandan,
+
+You have received a new message through your portfolio website contact form.
+
+═══════════════════════════════════════
+
+👤 CONTACT DETAILS:
+Name: {{name}}
+Email: {{from_email}}
+Subject: {{subject}}
+
+📝 MESSAGE:
+{{message}}
+
+═══════════════════════════════════════
+
+💡 QUICK ACTIONS:
+• Reply directly: {{from_email}}
+• Subject line: Re: {{subject}}
+
+This email was automatically sent from your portfolio contact form.
+Timestamp: {{date}} {{time}}
+
+---
+Chandan Kumar Portfolio
+https://your-portfolio-url.com

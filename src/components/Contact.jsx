@@ -37,6 +37,19 @@ const Contact = () => {
         }
 
         try {
+            // Get current date and time
+            const now = new Date();
+            const submissionDate = now.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            const submissionTime = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            });
+
             // Prepare template parameters
             const templateParams = {
                 name: formData.name,
@@ -45,6 +58,8 @@ const Contact = () => {
                 subject: formData.subject,
                 message: formData.message,
                 to_name: 'Chandan Kumar', // Your name
+                submission_date: submissionDate,
+                submission_time: submissionTime,
             };
 
             // Send email using EmailJS
