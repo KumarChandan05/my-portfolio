@@ -1,15 +1,37 @@
 {
   "name": "my-portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "1.0.0",
+  "description": "A modern portfolio website built with React and Vite",
   "type": "module",
+  "license": "MIT",
+  "author": "KumarChandan05",
+  "homepage": "https://github.com/KumarChandan05/my-portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KumarChandan05/my-portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KumarChandan05/my-portfolio/issues"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "javascript",
+    "frontend",
+    "web-development"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:fix": "eslint . --fix",
+    "preview": "vite preview",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
@@ -22,6 +44,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "globals": "^16.4.0",
+    "terser": "^5.44.0",
     "vite": "^7.1.7"
   }
 }

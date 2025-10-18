@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/KumarChandan05/my-portfolio/sitemap.xml

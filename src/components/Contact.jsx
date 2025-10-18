@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { GitHubIcon, LinkedInIcon, TwitterIcon } from '../assets/icons';
+import { emailjsConfig, isEmailjsConfigured } from '../config/emailjs';
 import './Contact.css';
 
 const Contact = () => {
@@ -12,6 +14,7 @@ const Contact = () => {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -23,17 +26,49 @@ const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setSubmitStatus('');
+        setErrorMessage('');
 
-        // Simulate form submission
-        setTimeout(() => {
+        // Check if EmailJS is configured
+        if (!isEmailjsConfigured()) {
+            setErrorMessage('Email service is not configured. Please contact me directly via email.');
             setIsSubmitting(false);
+            return;
+        }
+
+        try {
+            // Prepare template parameters
+            const templateParams = {
+                name: formData.name,
+                from_email: formData.email,
+                email: formData.email,
+                subject: formData.subject,
+                message: formData.message,
+                to_name: 'Chandan Kumar', // Your name
+            };
+
+            // Send email using EmailJS
+            await emailjs.send(
+                emailjsConfig.serviceId,
+                emailjsConfig.templateId,
+                templateParams,
+                emailjsConfig.publicKey
+            );
+
             setSubmitStatus('success');
             setFormData({ name: '', email: '', subject: '', message: '' });
 
+            // Clear success message after 5 seconds
             setTimeout(() => {
                 setSubmitStatus('');
-            }, 3000);
-        }, 2000);
+            }, 5000);
+
+        } catch (error) {
+            console.error('Email sending failed:', error);
+            setErrorMessage('Failed to send message. Please try again or contact me directly via email.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const contactInfo = [
@@ -183,6 +218,12 @@ const Contact = () => {
                             {submitStatus === 'success' && (
                                 <div className="success-message">
                                     ✅ Message sent successfully! I'll get back to you soon.
+                                </div>
+                            )}
+
+                            {errorMessage && (
+                                <div className="error-message">
+                                    ❌ {errorMessage}
                                 </div>
                             )}
                         </form>
