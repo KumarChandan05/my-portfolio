@@ -7,7 +7,7 @@ const Skills = () => {
     { name: 'JavaScript', level: 85, category: 'frontend' },
     { name: 'TypeScript', level: 80, category: 'frontend' },
     { name: 'HTML/CSS', level: 95, category: 'frontend' },
-    { name: 'Node.js', level: 75, category: 'backend' },
+    { name: 'Node.js', level: 55, category: 'backend' },
     { name: 'Git', level: 85, category: 'tools' },
     { name: 'Figma', level: 80, category: 'design' },
     { name: 'Adobe XD', level: 75, category: 'design' },
