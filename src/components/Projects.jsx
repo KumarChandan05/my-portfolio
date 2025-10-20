@@ -10,8 +10,8 @@ const Projects = () => {
       title: 'Multi user video Call Application',
       category: 'web',
       image: <VideoIcon width={48} height={48} />,
-      description: 'A full-stack e-commerce platform with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      description: 'A full-stack e-commerce platform with React, Node.js, and Socket.io. Features include user authentication, product management, and payment integration.',
+      technologies: ['React', 'Node.js', 'Express','Socket.io', 'WebRTC'],
     },
     {
       id: 2,
@@ -19,15 +19,15 @@ const Projects = () => {
       category: 'web',
       image: <DocumentIcon width={48} height={48} />,
       description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      technologies: ['React', 'Socket.io', 'Express', 'PostgreSQL'],
+      technologies: ['React', 'Node.js', 'Express', 'Multer'],
     },
     {
       id: 6,
       title: 'Speech to text voice Chat Application',
       category: 'web',
       image: <ChatIcon width={48} height={48} />,
-      description: 'Real-time voice chat application with multiple rooms.',
-      technologies: ['React', 'Socket.io', 'Node.js', 'Redis'],
+      description: 'An intelligent voice chat application that converts speech into text in real time, enabling users to communicate through voice commands. Features include live transcription. An intuitive chat interface powered by modern web technologies.',
+      technologies: ['React', 'Socket.io', 'Node.js', 'Express', 'Google STT'],
     },
   ];
 

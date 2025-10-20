@@ -5,7 +5,6 @@ import LinkedInIcon from '../assets/LinkedInIcon';
 import TwitterIcon from '../assets/TwitterIcon';
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   const quickLinks = [
@@ -102,7 +101,7 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <span className="icon">📧</span>
-                <span>chandan050201@gmail.com.com</span>
+                <span>chandan050201@gmail.com</span>
               </div>
               <div className="contact-item">
                 <span className="icon">📱</span>
@@ -112,32 +111,6 @@ const Footer = () => {
                 <span className="icon">📍</span>
                 <span>Bengaluru, Karnataka  560037</span>
               </div>
-            </div>
-          </div>
-
-          <div className="footer-section">
-            <h4>Newsletter</h4>
-            <p>Stay updated with my latest projects and insights.</p>
-            <div className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="newsletter-input"
-              />
-              <button className="newsletter-btn">Subscribe</button>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-bottom">
-          <div className="footer-divider"></div>
-          <div className="footer-bottom-content">
-            <p className="copyright">
-              © {currentYear} Chandan Kumar. All rights reserved.
-            </p>
-            <div className="footer-bottom-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
             </div>
           </div>
         </div>

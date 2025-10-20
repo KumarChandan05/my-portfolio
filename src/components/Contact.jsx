@@ -103,7 +103,7 @@ const Contact = () => {
             icon: '📍',
             title: 'Location',
             value: 'Bengaluru, Karnataka  560037',
-            link: '#'
+            link: 'https://www.google.com/maps/place/Bengaluru,+Karnataka+560037/@12.9565243,77.6474184,13z/data=!3m1!4b1!4m6!3m5!1s0x3bae122d4b84fc6f:0x7adaede97b682535!8m2!3d12.9566294!4d77.7046823!16s%2Fg%2F12vsd0jw2?authuser=0&entry=ttu&g_ep=EgoyMDI1MTAxNC4wIKXMDSoASAFQAw%3D%3D'
         },
         {
             icon: <LinkedInIcon />,
@@ -155,7 +155,7 @@ const Contact = () => {
                             <a href="https://github.com/KumarChandan05" className="social-link" aria-label="GitHub">
                                 <GitHubIcon width={20} height={20} />
                             </a>
-                            <a href="#" className="social-link" aria-label="Twitter">
+                            <a href="https://x.com/Chandan76554165" className="social-link" aria-label="Twitter">
                                 <TwitterIcon width={20} height={20} />
                             </a>
                         </div>
