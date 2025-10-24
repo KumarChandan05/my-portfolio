@@ -23,7 +23,7 @@ const Projects = () => {
     },
     {
       id: 6,
-      title: 'Speech to text voice Chat Application',
+      title: 'Conversational AI Companion',
       category: 'web',
       image: <ChatIcon width={48} height={48} />,
       description: 'An intelligent voice chat application that converts speech into text in real time, enabling users to communicate through voice commands. Features include live transcription. An intuitive chat interface powered by modern web technologies.',
