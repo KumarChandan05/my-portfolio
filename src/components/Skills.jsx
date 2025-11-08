@@ -7,8 +7,8 @@ const Skills = () => {
     { name: 'JavaScript', level: 85, category: 'frontend' },
     { name: 'TypeScript', level: 80, category: 'frontend' },
     { name: 'HTML/CSS', level: 95, category: 'frontend' },
-    { name: 'Node.js', level: 55, category: 'backend' },
-    { name: 'Git', level: 85, category: 'tools' },
+    { name: 'Node.js', level: 40, category: 'backend' },
+    { name: 'Express', level: 55, category: 'backend' },
     { name: 'Figma', level: 80, category: 'design' },
     { name: 'Adobe XD', level: 75, category: 'design' },
   ];
@@ -16,7 +16,6 @@ const Skills = () => {
   const categories = {
     frontend: { icon: '⚛️', title: 'Frontend' },
     backend: { icon: '⚙️', title: 'Backend' },
-    tools: { icon: '🛠️', title: 'Tools' },
     design: { icon: '🎨', title: 'Design' },
   };
 
@@ -34,7 +33,7 @@ const Skills = () => {
         <div className="skills-grid">
           {Object.entries(categories).map(([categoryKey, category]) => {
             const categorySkills = skillsData.filter(skill => skill.category === categoryKey);
-            
+
             return (
               <div key={categoryKey} className="skill-category">
                 <div className="category-header">
@@ -49,7 +48,7 @@ const Skills = () => {
                         <span className="skill-percentage">{skill.level}%</span>
                       </div>
                       <div className="skill-bar">
-                        <div 
+                        <div
                           className="skill-progress"
                           style={{ '--progress': `${skill.level}%` }}
                         ></div>
